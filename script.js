@@ -78,7 +78,8 @@ function generatePassword(lower, upper, number, spchar, length){
     });
   }
   console.log(generatedPassword);
-  return generatedPassword;
+  
+  return generatedPassword.slice(0,length);
 }
   //function to get random lowercase letter
 function randomLower(){
