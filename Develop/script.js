@@ -2,31 +2,36 @@
 var generateBtn = document.querySelector("#generate");
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
+// random object.  this object contains all function names
 const randomObj = {
   lower: randomLower,
   upper: randomUpper,
   number: randomNumber,
   spchar: randomSpecialChar,
 }
-console.log (Math.floor(Math.random()*26)+97);
+
 // Write password to the #password input
 function writePassword() {
     
-    var pwLength
+    
+    var pwLength;
+    var pwAlert;
     
     
     pwLength = prompt("Enter password length? Choose between 8 to 128.");
     if(!pwLength){
-      pwLength = prompt("You must enter password length between 8 to 128.");
+      pwAlert = alert("You must enter password length between 8 to 128.");
+      return;
     }
     if (pwLength < 8 ) {
     // Validate user Input
-      pwLength = prompt("You must enter password length between 8 to 128.");
+       pwAlert = alert("You must enter password length between 8 to 128.");
+       return;
     } 
     if(pwLength > 128) {
         // Validate user Input
-      pwLength = prompt("You must enter password length between 8 to 128.");
+       pwAlert = alert("You must enter password length between 8 to 128.");
+       return;
     }
       var pwLower = confirm("Will this contain lower case letters?");
       var pwUpper = confirm("Will this contain upper case letters?");
@@ -38,9 +43,9 @@ function writePassword() {
     // Validtate all negative option
     if(!pwLower && !pwUpper && !pwNumber && !pwSpecialChar){
       var choice = alert ("You must choose a criteria");
-      
+      return;
     } 
-
+    // generatePassword function with prompt and confirm inputs as attributes
     var password = generatePassword(pwLower, pwUpper, pwNumber, pwSpecialChar, pwLength);
     var passwordText = document.querySelector("#password");
     passwordText.value = password;
@@ -71,23 +76,23 @@ function generatePassword(lower, upper, number, spchar, length){
   console.log(generatedPassword);
   return generatedPassword;
 }
-  
-
+  //function to get random lowercase letter
 function randomLower(){
   return String.fromCharCode(Math.floor(Math.random()*26)+97);
 }
-// converts letters to uppercase 
+//function to get random uppercase letter
 function randomUpper(){
   return String.fromCharCode(Math.floor(Math.random()*26)+65);
 }
-
+//function to get random number
 function randomNumber(){
   return String.fromCharCode(Math.floor(Math.random()*10)+48);
 }
-
+//function to get random special character
 function randomSpecialChar(){
   const specialChar = "!@#$*%+-&~|/"
   return specialChar[Math.floor(Math.random()*specialChar.length)];
 }
+
 
 
