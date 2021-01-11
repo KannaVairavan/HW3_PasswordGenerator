@@ -12,24 +12,24 @@ User will be presented with series of prompts for password criteria
 (password length, lowercase, uppercase, numeric, and/or special characters)
 
 Prompt user for password length
-![ScreenShot](/assets/Prompt.PNG)
+![ScreenShot](./assets/Prompt.PNG)
 
 Confirm lowercase letters
-![ScreenShot](/assets/Confirm_Lowercase.PNG)
+![ScreenShot](./assets/Confirm_Lowercase.PNG)
 
 Confirm uppercase letters
-![ScreenShot](/assets/Confirm_Uppercase.PNG)
+![ScreenShot](./assets/Confirm_Uppercase.PNG)
 
 Confirm numbers
-![ScreenShot](/assets/confirm_number.PNG)
+![ScreenShot](./assets/confirm_number.PNG)
 
 Confirm Special Characters
-![ScreenShot](/assets/Confirm_SpecialChar.PNG)
+![ScreenShot](./assets/Confirm_SpecialChar.PNG)
 
 This project validates password length.
 This project validates at least one character type is selected.
 password is generated that matches the selected criteria and written to the page
-![ScreenShot](/assets/Password_Example.PNG)
+![ScreenShot](./assets/Password_Example.PNG)
 
 ## Link
 
