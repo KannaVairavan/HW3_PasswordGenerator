@@ -33,9 +33,13 @@ function writePassword() {
        pwAlert = alert("You must enter password length between 8 to 128.");
        return;
     }
+    // Confirm lowercase letters
       var pwLower = confirm("Will this contain lower case letters?");
+    // Confirm uppercase letters 
       var pwUpper = confirm("Will this contain upper case letters?");
+    // Confirm numbers
       var pwNumber = confirm("Will this contain number?");
+    // Confirm Special Characters
       var pwSpecialChar =confirm("will this contain special characters?");
     
      console.log(pwLower, pwUpper, pwNumber, pwSpecialChar, pwLength) ;
